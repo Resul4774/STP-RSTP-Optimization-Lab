@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<lab name="Layer 2 Resilience Mastering STP and RSTP Convergence" version="1" scripttimeout="300" lock="0">
+  <topology>
+    <nodes>
+      <node id="1" name="LAB-SW-01" type="qemu" template="viosl2" image="viosl2-adventerprisek9-m.ssa.high_iron_20200929" console="telnet" cpu="1" cpulimit="0" ram="1024" ethernet="8" uuid="3c1d3e10-9512-41c8-84e5-718117305c67" qemu_options="-machine type=pc,accel=kvm -serial mon:stdio -nographic -no-user-config -nodefaults -rtc base=utc -cpu host" qemu_version="2.4.0" qemu_arch="x86_64" delay="0" icon="Switch-2D-L2-Generic-S.svg" config="0" left="219" top="363">
+        <interface id="1" name="Gi0/1" type="ethernet" network_id="1"/>
+        <interface id="3" name="Gi0/3" type="ethernet" network_id="3"/>
+      </node>
+      <node id="2" name="LAB-SW-02" type="qemu" template="viosl2" image="viosl2-adventerprisek9-m.ssa.high_iron_20200929" console="telnet" cpu="1" cpulimit="0" ram="1024" ethernet="8" uuid="6484ef69-2d5e-45c2-ad53-9a92350dc1bf" qemu_options="-machine type=pc,accel=kvm -serial mon:stdio -nographic -no-user-config -nodefaults -rtc base=utc -cpu host" qemu_version="2.4.0" qemu_arch="x86_64" delay="0" icon="Switch-2D-L2-Generic-S.svg" config="0" left="411" top="231">
+        <interface id="1" name="Gi0/1" type="ethernet" network_id="1"/>
+        <interface id="2" name="Gi0/2" type="ethernet" network_id="2"/>
+      </node>
+      <node id="3" name="LAB-SW-03" type="qemu" template="viosl2" image="viosl2-adventerprisek9-m.ssa.high_iron_20200929" console="telnet" cpu="1" cpulimit="0" ram="1024" ethernet="8" uuid="bba72a7c-abbf-46ae-9ec4-e282677e21a0" qemu_options="-machine type=pc,accel=kvm -serial mon:stdio -nographic -no-user-config -nodefaults -rtc base=utc -cpu host" qemu_version="2.4.0" qemu_arch="x86_64" delay="0" icon="Switch-2D-L2-Generic-S.svg" config="0" left="624" top="363">
+        <interface id="2" name="Gi0/2" type="ethernet" network_id="2"/>
+        <interface id="3" name="Gi0/3" type="ethernet" network_id="3"/>
+      </node>
+    </nodes>
+    <networks>
+      <network id="1" type="bridge" name="Net-LAB-SW-01iface_1" left="276" top="409" visibility="0" icon="lan.png"/>
+      <network id="2" type="bridge" name="Net-LAB-SW-02iface_2" left="471" top="271" visibility="0" icon="lan.png"/>
+      <network id="3" type="bridge" name="Net-LAB-SW-01iface_3" left="276" top="409" visibility="0" icon="lan.png"/>
+    </networks>
+  </topology>
+</lab>
